@@ -5,7 +5,6 @@ self:
 {
 imports =
     [
-        ./modules
     ];
 
 home.username = "jules";
