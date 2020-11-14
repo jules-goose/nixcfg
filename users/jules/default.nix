@@ -22,6 +22,8 @@ home = {
 
     packages = with pkgs;
         [
+	discord-stable
+	google-chrome-stable
 	];
     };
 
