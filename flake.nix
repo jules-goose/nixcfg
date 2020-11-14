@@ -7,7 +7,7 @@
     nur.url = "github:nix-community/NUR";
     };
 
-  outputs = { self, home-manager, nixpkgs, ... }@inputs: {
+  outputs = { self, home-manager, nixpkgs, nur, ... }@inputs: {
     nixosConfigurations = {
       mandrake = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -19,6 +19,7 @@
             home-manager.useUserPackages = true;
             home-manager.users = import ./users self; # pass 'self' in order to allow ./users/default.nix -> ./users/matthew/default.nix to access ${self}, to provide a path relative to flake.nix.
           }
+          { nixpkgs.overlays = [ nur.overlay ]; }
         ];
         specialArgs = { inherit inputs; };
       };
