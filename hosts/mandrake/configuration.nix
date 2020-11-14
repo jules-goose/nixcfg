@@ -34,7 +34,7 @@ networking.useDHCP = true;
     # List packages installed in system profile. To search, run:
     # $ nix search wget
     environment.systemPackages = with pkgs; [
-        wget vim mpv htop vimPlugins.vim-addon-nix
+        wget vim mpv htop vimPlugins.vim-addon-nix git
     ];
 
     # Define a user account. Don't forget to set a password with ‘passwd’.
@@ -74,6 +74,16 @@ networking.useDHCP = true;
     # Enable the OpenSSH daemon.
     services.openssh.enable = true;
 
-    
+    # x window system
+    services.xserver.enable = true;
+
+    # desktop manager
+    services.xserver.desktopManager.plasma5.enable = true;
+
+    # display manager
+    services.xserver.displayManager.gdm.enable = true;
+
+    # keyboard layout
+    services.xserver.layout = "fr";
 
 }
