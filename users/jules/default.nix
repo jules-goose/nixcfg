@@ -21,12 +21,13 @@ home.file."scripts".source = "${self}/scripts"; # pass 'self' in order to allow 
 home = { 
     extraOutputsToInstall = [ "man" ]; # Additionally installs the manpages for each pkg
 
-    packages = with pkgs;
+    packages = with  pkgs;
         [
 	discord
 	google-chrome
 	vscode
 	qemu
+        parsecgaming
 	];
     };
 

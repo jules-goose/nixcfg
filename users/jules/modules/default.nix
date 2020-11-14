@@ -1,6 +1,6 @@
 {
     imports = 
       [
-        ./parsec/default.nix
-      ]
+       # ./parsec/default.nix
+      ];
 }
