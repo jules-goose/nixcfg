@@ -1,0 +1,6 @@
+{
+    imports = 
+      [
+        ./parsec/default.nix
+      ]
+}

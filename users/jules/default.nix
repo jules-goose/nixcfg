@@ -5,6 +5,7 @@ self:
 {
 imports =
     [
+      ./modules
     ];
 
 home.username = "jules";
@@ -22,8 +23,10 @@ home = {
 
     packages = with pkgs;
         [
-	discord-stable
-	google-chrome-stable
+	discord
+	google-chrome
+	vscode
+	qemu
 	];
     };
 

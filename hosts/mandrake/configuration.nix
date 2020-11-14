@@ -85,5 +85,6 @@ networking.useDHCP = true;
 
     # keyboard layout
     services.xserver.layout = "fr";
+    
 
 }
