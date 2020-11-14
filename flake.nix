@@ -11,7 +11,7 @@
 /* ignore:: */ let ignoreme = ({config,lib,self,home-manager,nixpkgs,...}: with lib; { system.nixos.revision = mkForce null; system.nixos.versionSuffix = mkForce "pre-git"; }); in
 {
     nixosConfigurations = {
-		t480 = inputs.nixpkgs.lib.nixosSystem {
+		mandrake = inputs.nixpkgs.lib.nixosSystem {
 			system = "x86_64-linux";
 			modules = [
 				(import ./hosts/mandrake/configuration.nix) #mandrake = main desktop
