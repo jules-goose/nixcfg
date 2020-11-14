@@ -22,7 +22,7 @@ home = {
 
     packages = with pkgs;
         [
-        ];
+	];
     };
 
 # This value determines the Home Manager release that your
