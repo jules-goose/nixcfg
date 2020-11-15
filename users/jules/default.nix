@@ -28,6 +28,7 @@ home = {
 	google-chrome
 	vscode
 	qemu
+	docker
         ];
     };
 
