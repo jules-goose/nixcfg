@@ -37,7 +37,15 @@ networking.useDHCP = true;
     # List packages installed in system profile. To search, run:
     # $ nix search wget
     environment.systemPackages = with pkgs; [
-        wget vim mpv htop vimPlugins.vim-addon-nix git
+        wget 
+        vim
+        mpv
+        htop
+        vimPlugins.vim-addon-nix
+        git
+        vscode
+        pkgs.nur.repos.clefru.parsecgaming
+        docker
     ];
 
     # Define a user account. Don't forget to set a password with ‘passwd’.
@@ -85,9 +93,13 @@ networking.useDHCP = true;
 
     # display manager
     services.xserver.displayManager.gdm.enable = true;
-
+    services.xserver.displayManager.autoLogin.enable = true;
+    services.xserver.displayManager.autoLogin.user = "jules";
     # keyboard layout
     services.xserver.layout = "fr";
     
+    #temporary ntfs support
+    boot.supportedFilesystems = [ "ntfs" ];
+
 
 }

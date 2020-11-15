@@ -28,8 +28,6 @@ home = {
 	google-chrome
 	vscode
 	qemu
-        pkgs.nur.repos.clefru.parsecgaming
-
         ];
     };
 
