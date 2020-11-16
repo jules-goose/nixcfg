@@ -16,8 +16,6 @@ programs.home-manager.enable = true;
 xdg.enable = true;
 
 home.file."scripts".source = "${self}/scripts"; # pass 'self' in order to allow ./users/default.nix -> ./users/matthew/default.nix to access ${self}, to provide a path relative to flake.nix.
-home.file.".config".source = "${self}/.config";
-
 
 
 home = { 
@@ -25,11 +23,13 @@ home = {
 
     packages = with  pkgs;
         [
+        kitty
 	discord
 	google-chrome
 	vscode
 	qemu
 	docker
+        feh
         ];
     };
 

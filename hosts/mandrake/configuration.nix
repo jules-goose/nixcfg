@@ -46,6 +46,7 @@ networking.useDHCP = true;
         vscode
         pkgs.nur.repos.clefru.parsecgaming
         docker
+        feh
     ];
     virtualisation.docker.enable= true;
 
@@ -90,7 +91,7 @@ networking.useDHCP = true;
     services.xserver.enable = true;
     services.xserver.videoDrivers = [ "amdgpu" ];
     # desktop manager
-    services.xserver.desktopManager.plasma5.enable = true;
+    services.xserver.windowManager.i3.enable = true;
 
     # display manager
     services.xserver.displayManager.gdm.enable = true;
@@ -115,6 +116,5 @@ networking.useDHCP = true;
     # For 32 bit applications
     hardware.opengl.extraPackages32 = with pkgs; [
       driversi686Linux.amdvlk
-   ];
-    
+   ];    
 }

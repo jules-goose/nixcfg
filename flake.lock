@@ -5,11 +5,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1605395522,
-        "narHash": "sha256-s1T94x5wnY3TqStT6d9IUA8sLYO76/ZV6HOckovVjmY=",
+        "lastModified": 1605480595,
+        "narHash": "sha256-4mMH9tbtXwv0XUBQejBrSWIu2Hro1/ZbXUtOMAzn5nk=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "b04aa56503c59d07a72361dfe9845c3ab2faac1b",
+        "rev": "9e01441c5c1111cfd6f1d021c742949760f29d4f",
         "type": "github"
       },
       "original": {
@@ -20,11 +20,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1605458347,
-        "narHash": "sha256-k81GSOP5CRLPNYxAa/Y9h6mEc3ABafzZewVzGwCfcEY=",
+        "lastModified": 1605544632,
+        "narHash": "sha256-xRtQABDLzD6tYaeA+1VLjk9rQJclyiTI2aa9xmPWkEs=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "81bd63045480df99fc3446ab9bba58517fd8e3cf",
+        "rev": "a9a1423377ba23981361af583a648d00f44b74e6",
         "type": "github"
       },
       "original": {
@@ -34,11 +34,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1605171959,
-        "narHash": "sha256-JIM7QrQ2jpnA6qRfP8MzXD8USiWYStfL9Cssz01QvMw=",
+        "lastModified": 1605225031,
+        "narHash": "sha256-W+7blIrccTCTyQCCE4aGn1cFrGIuTinN96GxZrJiojs=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "a371c1071161104d329f6a85d922fd92b7cbab63",
+        "rev": "2deeb58f49480f468adca6b08291322de4dbce6b",
         "type": "github"
       },
       "original": {
@@ -50,11 +50,11 @@
     },
     "nur": {
       "locked": {
-        "lastModified": 1605454510,
-        "narHash": "sha256-pVq0Elmzi7VFhcq1ZXffOWvZl7vPdnV5ZG9+kkt+4c8=",
+        "lastModified": 1605545843,
+        "narHash": "sha256-XMQimiI6Lx6kFABeayrufWDA8mZ0mgW3PBFAya1Vc7g=",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "041a8b73e100f2b5204ddfdd5617934566c1a555",
+        "rev": "83750347b4ae92e4c8bf71a805ced5552a887d86",
         "type": "github"
       },
       "original": {
