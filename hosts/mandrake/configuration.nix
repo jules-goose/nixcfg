@@ -47,11 +47,12 @@ networking.useDHCP = true;
         pkgs.nur.repos.clefru.parsecgaming
         docker
     ];
+    virtualisation.docker.enable= true;
 
     # Define a user account. Don't forget to set a password with ‘passwd’.
     users.users.jules = {
         isNormalUser = true;
-        extraGroups = [ "input"  ]; # Enable ‘sudo’ for the user.
+        extraGroups = [ "input" "wheel" "docker"  ]; # Enable ‘sudo’ for the user.
     };
 
 
@@ -87,7 +88,7 @@ networking.useDHCP = true;
 
     # x window system
     services.xserver.enable = true;
-
+    services.xserver.videoDrivers = [ "amdgpu" ];
     # desktop manager
     services.xserver.desktopManager.plasma5.enable = true;
 
@@ -100,6 +101,20 @@ networking.useDHCP = true;
     
     #temporary ntfs support
     boot.supportedFilesystems = [ "ntfs" ];
-
-
+ 
+    hardware.opengl.driSupport = true;
+    # For 32 bit applications
+    hardware.opengl.driSupport32Bit = true;
+ 
+   # enable opencl
+    hardware.opengl.extraPackages = with pkgs; [
+      rocm-opencl-icd
+      rocm-opencl-runtime
+      amdvlk
+    ];
+    # For 32 bit applications
+    hardware.opengl.extraPackages32 = with pkgs; [
+      driversi686Linux.amdvlk
+   ];
+    
 }
