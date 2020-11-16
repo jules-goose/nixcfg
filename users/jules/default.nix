@@ -29,7 +29,6 @@ home = {
 	vscode
 	qemu
 	docker
-        feh
         ];
     };
 
