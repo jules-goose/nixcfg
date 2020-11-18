@@ -23,6 +23,28 @@ nix = {
 boot.loader.systemd-boot.enable = true;
 boot.loader.efi.canTouchEfiVariables = true;
 
+
+
+#gpu setup
+boot.initrd.kernelModules = [ "amdgpu" ];
+hardware.opengl.extraPackages = with pkgs; [
+   rocm-opencl-icd
+   rocm-opencl-runtime
+   amdvlk
+];
+# For 32 bit applications
+hardware.opengl.extraPackages32 = with pkgs; [
+driversi686Linux.amdvlk
+];  
+# enable vulkan
+hardware.opengl.driSupport = true;
+# For 32 bit applications
+hardware.opengl.driSupport32Bit = true;
+
+
+
+
+
 networking.hostName = "mandrake"; # Define your hostname.
 
 nixpkgs.overlays = [ inputs.nur.overlay ];
@@ -46,14 +68,14 @@ networking.useDHCP = true;
         vscode
         pkgs.nur.repos.clefru.parsecgaming
         docker
-        feh
-    ];
+        gparted
+];
     virtualisation.docker.enable= true;
 
     # Define a user account. Don't forget to set a password with ‘passwd’.
     users.users.jules = {
         isNormalUser = true;
-        extraGroups = [ "input" "wheel" "docker"  ]; # Enable ‘sudo’ for the user.
+        extraGroups = [ "input" "wheel" "docker" "audio" ]; # Enable ‘sudo’ for the user.
     };
 
 
@@ -91,30 +113,17 @@ networking.useDHCP = true;
     services.xserver.enable = true;
     services.xserver.videoDrivers = [ "amdgpu" ];
     # desktop manager
-    services.xserver.windowManager.i3.enable = true;
+    services.xserver.windowManager = {
+       i3.enable = true;
+    };
 
     # display manager
     services.xserver.displayManager.gdm.enable = true;
     services.xserver.displayManager.autoLogin.enable = true;
     services.xserver.displayManager.autoLogin.user = "jules";
     # keyboard layout
-    services.xserver.layout = "fr";
-    
-    #temporary ntfs support
-    boot.supportedFilesystems = [ "ntfs" ];
- 
-    hardware.opengl.driSupport = true;
-    # For 32 bit applications
-    hardware.opengl.driSupport32Bit = true;
- 
-   # enable opencl
-    hardware.opengl.extraPackages = with pkgs; [
-      rocm-opencl-icd
-      rocm-opencl-runtime
-      amdvlk
-    ];
-    # For 32 bit applications
-    hardware.opengl.extraPackages32 = with pkgs; [
-      driversi686Linux.amdvlk
-   ];    
+    services.xserver.layout = "fr"; 
+
+
+   
 }

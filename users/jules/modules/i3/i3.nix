@@ -11,7 +11,11 @@
     papirus-icon-theme
     adapta-gtk-theme
     noto-fonts
-
+    evince
+    joplin-desktop
+    maim
+    neofetch
+    pavucontrol    
     ];
     xdg.configFile."i3/config".source = ./i3.conf;
     xdg.configFile."dunst/dunstrc".source = ./dunst/dunstrc;

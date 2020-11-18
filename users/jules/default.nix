@@ -17,7 +17,6 @@ xdg.enable = true;
 
 home.file."scripts".source = "${self}/scripts"; # pass 'self' in order to allow ./users/default.nix -> ./users/matthew/default.nix to access ${self}, to provide a path relative to flake.nix.
 
-
 home = { 
     extraOutputsToInstall = [ "man" ]; # Additionally installs the manpages for each pkg
 
@@ -29,6 +28,10 @@ home = {
 	vscode
 	qemu
 	docker
+        godot
+        blender
+        joplin-desktop
+        tdesktop
         ];
     };
 
