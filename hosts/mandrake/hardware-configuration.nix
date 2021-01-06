@@ -9,7 +9,7 @@
     ];
 
   boot.initrd.availableKernelModules = [ "ahci" "ohci_pci" "ehci_pci" "pata_atiixp" "xhci_pci" "usbhid" "sd_mod" ];
-#  boot.kernelModules = [ "kvm-amd" ];
+  boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
 
 

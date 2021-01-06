@@ -22,7 +22,7 @@ nix = {
 # Use the systemd-boot EFI boot loader.
 boot.loader.systemd-boot.enable = true;
 boot.loader.efi.canTouchEfiVariables = true;
-
+virtualisation.libvirtd.enable = true;
 
 
 #gpu setup
@@ -32,7 +32,7 @@ hardware.opengl.extraPackages = with pkgs; [
    rocm-opencl-runtime
    amdvlk
 ];
-# For 32 bit applications
+## For 32 bit applications
 hardware.opengl.extraPackages32 = with pkgs; [
 driversi686Linux.amdvlk
 ];  
@@ -69,13 +69,18 @@ networking.useDHCP = true;
         pkgs.nur.repos.clefru.parsecgaming
         docker
         gparted
+        clinfo
+        vulkan-tools
+	mosquitto
+	rustup
+	gcc
 ];
     virtualisation.docker.enable= true;
 
     # Define a user account. Don't forget to set a password with ‘passwd’.
     users.users.jules = {
         isNormalUser = true;
-        extraGroups = [ "input" "wheel" "docker" "audio" ]; # Enable ‘sudo’ for the user.
+        extraGroups = [ "input" "wheel" "docker" "audio" "libvirtd"]; # Enable ‘sudo’ for the user.
     };
 
 

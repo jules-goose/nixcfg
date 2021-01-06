@@ -23,15 +23,27 @@ home = {
     packages = with  pkgs;
         [
         kitty
-	discord
 	google-chrome
 	vscode
-	qemu
+	qemu libvirt bridge-utils virt-manager virt-viewer spice-vdagent libguestfs
 	docker
         godot
         blender
         joplin-desktop
         tdesktop
+        steam
+        vulkan-tools
+        clinfo
+	peek        
+	mosquitto
+	rustup
+        gcc
+        discord
+	python
+	python3
+	jupyter
+	arduino
+	platformio
         ];
     };
 

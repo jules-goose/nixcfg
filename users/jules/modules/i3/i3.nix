@@ -6,6 +6,8 @@
     dunst
     lxappearance
     cinnamon.nemo
+    ranger
+    gsettings-desktop-schemas
     feh
     arc-theme
     papirus-icon-theme
