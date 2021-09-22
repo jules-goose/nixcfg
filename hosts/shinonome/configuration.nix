@@ -45,7 +45,7 @@ hardware.opengl.driSupport32Bit = true;
 
 
 
-networking.hostName = "mandrake"; # Define your hostname.
+networking.hostName = "shinonome"; # Define your hostname.
 
 nixpkgs.overlays = [ inputs.nur.overlay ];
 
