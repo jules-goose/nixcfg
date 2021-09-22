@@ -34,16 +34,14 @@ home = {
         steam
         vulkan-tools
         clinfo
-	peek        
-	mosquitto
-	rustup
+	    peek        
+	    mosquitto
+	    rustup
         gcc
         discord
-	python
-	python3
-	jupyter
-	arduino
-	platformio
+	    python
+	    python3
+	    jupyter
         ];
     };
 
