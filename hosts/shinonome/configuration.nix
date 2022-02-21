@@ -22,24 +22,24 @@ nix = {
 # Use the systemd-boot EFI boot loader.
 boot.loader.systemd-boot.enable = true;
 boot.loader.efi.canTouchEfiVariables = true;
-virtualisation.libvirtd.enable = true;
+#virtualisation.libvirtd.enable = true;
 
 
 #gpu setup
-boot.initrd.kernelModules = [ "amdgpu" ];
-hardware.opengl.extraPackages = with pkgs; [
-   rocm-opencl-icd
-   rocm-opencl-runtime
-   amdvlk
-];
+#boot.initrd.kernelModules = [ "amdgpu" ];
+#hardware.opengl.extraPackages = with pkgs; [
+#   rocm-opencl-icd
+#   rocm-opencl-runtime
+#   amdvlk
+#];
 ## For 32 bit applications
-hardware.opengl.extraPackages32 = with pkgs; [
-driversi686Linux.amdvlk
-];  
+#hardware.opengl.extraPackages32 = with pkgs; [
+#driversi686Linux.amdvlk
+#];  
 # enable vulkan
-hardware.opengl.driSupport = true;
+#hardware.opengl.driSupport = true;
 # For 32 bit applications
-hardware.opengl.driSupport32Bit = true;
+#hardware.opengl.driSupport32Bit = true;
 
 
 
@@ -66,13 +66,8 @@ networking.useDHCP = true;
         vimPlugins.vim-addon-nix
         git
         vscode
-        pkgs.nur.repos.clefru.parsecgaming
-        docker
         gparted
         clinfo
-        vulkan-tools
-	mosquitto
-	rustup
 	gcc
 ];
     virtualisation.docker.enable= true;
