@@ -20,11 +20,13 @@ nix = {
 };
 
 # Use the systemd-boot EFI boot loader.
-boot.loader.systemd-boot.enable = true;
-boot.loader.efi.canTouchEfiVariables = true;
+#boot.loader.systemd-boot.enable = true;
+#boot.loader.efi.canTouchEfiVariables = true;
 #virtualisation.libvirtd.enable = true;
 
-
+boot.loader.grub.enable = true;
+boot.loader.grub.version = 2;
+boot.loader.grub.device = "/dev/sda";
 #gpu setup
 #boot.initrd.kernelModules = [ "amdgpu" ];
 #hardware.opengl.extraPackages = with pkgs; [
@@ -111,7 +113,7 @@ networking.useDHCP = true;
 
     # x window system
     services.xserver.enable = true;
-    services.xserver.videoDrivers = [ "amdgpu" ];
+    #services.xserver.videoDrivers = [ "amdgpu" ];
     # desktop manager
     services.xserver.windowManager = {
        i3.enable = true;
