@@ -24,21 +24,21 @@ home = {
         [
         kitty
 	google-chrome
-	vscode
-	qemu libvirt bridge-utils virt-manager virt-viewer spice-vdagent libguestfs
-	docker
-        godot
-        blender
+	#vscode
+	#qemu libvirt bridge-utils virt-manager virt-viewer spice-vdagent libguestfs
+	#docker
+        #godot
+       # blender
         joplin-desktop
         tdesktop
-        steam
-        vulkan-tools
+    #    steam
+     #   vulkan-tools
         clinfo
 	    peek        
 	    mosquitto
 	    rustup
         gcc
-        discord
+      #  discord
 	    python
 	    python3
 	    jupyter

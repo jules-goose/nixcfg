@@ -67,7 +67,7 @@ networking.useDHCP = true;
         htop
         vimPlugins.vim-addon-nix
         git
-        vscode
+        #vscode
         gparted
         clinfo
 	gcc
