@@ -8,8 +8,8 @@
     imports =
     [ # Include the results of the hardware scan.
         ./hardware-configuration.nix
-#      ./modules
-#      ./cachix.nix
+      ./modules
+      ./cachix.nix
     ];
 
 nix = {
@@ -112,17 +112,17 @@ networking.useDHCP = true;
     services.openssh.enable = true;
 
     # x window system
-    services.xserver.enable = true;
+    #services.xserver.enable = true;
     #services.xserver.videoDrivers = [ "amdgpu" ];
     # desktop manager
-    services.xserver.windowManager = {
-       i3.enable = true;
-    };
+    #services.xserver.windowManager = {
+    #   i3.enable = true;
+    #};
 
     # display manager
-    services.xserver.displayManager.gdm.enable = true;
-    services.xserver.displayManager.autoLogin.enable = true;
-    services.xserver.displayManager.autoLogin.user = "jules";
+    #services.xserver.displayManager.gdm.enable = true;
+    #services.xserver.displayManager.autoLogin.enable = true;
+    #services.xserver.displayManager.autoLogin.user = "jules";
     # keyboard layout
     services.xserver.layout = "fr"; 
 

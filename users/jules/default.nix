@@ -42,6 +42,7 @@ home = {
 	    python
 	    python3
 	    jupyter
+        
         ];
     };
 
