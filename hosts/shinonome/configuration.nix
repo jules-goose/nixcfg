@@ -24,9 +24,6 @@ nix = {
 #boot.loader.efi.canTouchEfiVariables = true;
 #virtualisation.libvirtd.enable = true;
 
-boot.loader.grub.enable = true;
-boot.loader.grub.version = 2;
-boot.loader.grub.device = "/dev/sda";
 #gpu setup
 #boot.initrd.kernelModules = [ "amdgpu" ];
 #hardware.opengl.extraPackages = with pkgs; [
