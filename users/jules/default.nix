@@ -24,6 +24,7 @@ home = {
         [
         kitty
 	google-chrome
+	firefox
 	#vscode
 	#qemu libvirt bridge-utils virt-manager virt-viewer spice-vdagent libguestfs
 	#docker
