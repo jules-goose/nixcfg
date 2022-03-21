@@ -8,8 +8,8 @@
     imports =
     [ # Include the results of the hardware scan.
         ./hardware-configuration.nix
-      ./modules
-      ./cachix.nix
+#      ./modules
+#      ./cachix.nix
     ];
 
 nix = {
@@ -20,9 +20,10 @@ nix = {
 };
 
 # Use the systemd-boot EFI boot loader.
-#boot.loader.systemd-boot.enable = true;
-#boot.loader.efi.canTouchEfiVariables = true;
-#virtualisation.libvirtd.enable = true;
+boot.loader.systemd-boot.enable = true;
+boot.loader.efi.canTouchEfiVariables = true;
+virtualisation.libvirtd.enable = true;
+
 
 #gpu setup
 #boot.initrd.kernelModules = [ "amdgpu" ];
@@ -64,9 +65,13 @@ networking.useDHCP = true;
         htop
         vimPlugins.vim-addon-nix
         git
-        #vscode
+        vscode
+        pkgs.nur.repos.clefru.parsecgaming
+        docker
         gparted
         clinfo
+	mosquitto
+	rustup
 	gcc
 ];
     virtualisation.docker.enable= true;
@@ -86,7 +91,7 @@ networking.useDHCP = true;
     i18n.defaultLocale = "en_US.UTF-8";
     console = {
         font = "Lat2-Terminus16";
-        keyMap = "us";
+        keyMap = "fr";
     };
 
     # Set your time zone.
@@ -100,7 +105,7 @@ networking.useDHCP = true;
 
     # Enable sound.
     # sound.enable = true;
-    hardware.pulseaudio.enable = true;
+    #hardware.pulseaudio.enable = true;
 
     # List services that you want to enable:
     nixpkgs.config.allowUnfree = true;
@@ -109,17 +114,17 @@ networking.useDHCP = true;
     services.openssh.enable = true;
 
     # x window system
-    #services.xserver.enable = true;
+    services.xserver.enable = true;
     #services.xserver.videoDrivers = [ "amdgpu" ];
     # desktop manager
-    #services.xserver.windowManager = {
-    #   i3.enable = true;
-    #};
+    services.xserver.windowManager = {
+       i3.enable = true;
+    };
 
     # display manager
-    #services.xserver.displayManager.gdm.enable = true;
-    #services.xserver.displayManager.autoLogin.enable = true;
-    #services.xserver.displayManager.autoLogin.user = "jules";
+    services.xserver.displayManager.gdm.enable = true;
+    services.xserver.displayManager.autoLogin.enable = true;
+    services.xserver.displayManager.autoLogin.user = "jules";
     # keyboard layout
     services.xserver.layout = "fr"; 
 
