@@ -65,21 +65,21 @@ networking.useDHCP = true;
         htop
         vimPlugins.vim-addon-nix
         git
-        vscode
-        pkgs.nur.repos.clefru.parsecgaming
-        docker
+        #vscode
+        #pkgs.nur.repos.clefru.parsecgaming
+        #docker
         gparted
         clinfo
-	mosquitto
+	#mosquitto
 	rustup
 	gcc
 ];
-    virtualisation.docker.enable= true;
+    #virtualisation.docker.enable= true;
 
     # Define a user account. Don't forget to set a password with ‘passwd’.
     users.users.jules = {
         isNormalUser = true;
-        extraGroups = [ "input" "wheel" "docker" "audio" "libvirtd"]; # Enable ‘sudo’ for the user.
+        extraGroups = [ "input" "wheel" "audio" "libvirtd"]; # Enable ‘sudo’ for the user.
     };
 
 
