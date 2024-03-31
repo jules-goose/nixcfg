@@ -23,27 +23,9 @@ home = {
     packages = with  pkgs;
         [
         kitty
-	google-chrome
-	firefox
-	#vscode
-	#qemu libvirt bridge-utils virt-manager virt-viewer spice-vdagent libguestfs
-	#docker
-        #godot
-       # blender
-        joplin-desktop
-        tdesktop
-    #    steam
-     #   vulkan-tools
-        clinfo
-	    peek        
-	    mosquitto
-	    rustup
-        gcc
-      #  discord
-	    python
-	    python3
-	    jupyter
-        
+        vscode
+        #qemu libvirt bridge-utils virt-manager virt-viewer spice-vdagent libguestfs
+        #vulkan-tools
         ];
     };
 

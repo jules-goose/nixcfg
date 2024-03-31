@@ -45,7 +45,7 @@ virtualisation.libvirtd.enable = true;
 
 
 
-networking.hostName = "shinonome"; # Define your hostname.
+networking.hostName = "treaka"; # Define your hostname.
 
 nixpkgs.overlays = [ inputs.nur.overlay ];
 
@@ -58,6 +58,7 @@ networking.useDHCP = true;
 
     # List packages installed in system profile. To search, run:
     # $ nix search wget
+    # need to refactor this so both host use the same packages specification
     environment.systemPackages = with pkgs; [
         wget 
         vim
@@ -65,21 +66,15 @@ networking.useDHCP = true;
         htop
         vimPlugins.vim-addon-nix
         git
-        #vscode
-        #pkgs.nur.repos.clefru.parsecgaming
-        #docker
         gparted
         clinfo
-	#mosquitto
-	rustup
-	gcc
 ];
     #virtualisation.docker.enable= true;
 
     # Define a user account. Don't forget to set a password with ‘passwd’.
     users.users.jules = {
         isNormalUser = true;
-        extraGroups = [ "input" "wheel" "audio" "libvirtd"]; # Enable ‘sudo’ for the user.
+        extraGroups = [ "sudo" "input" "wheel" "audio" "libvirtd"]; # Enable ‘sudo’ for the user.
     };
 
 
@@ -114,12 +109,10 @@ networking.useDHCP = true;
     services.openssh.enable = true;
 
     # x window system
-    services.xserver.enable = true;
-    #services.xserver.videoDrivers = [ "amdgpu" ];
+    services.sway.enable = true;
+    
     # desktop manager
-    services.xserver.windowManager = {
-       i3.enable = true;
-    };
+    
 
     # display manager
     services.xserver.displayManager.gdm.enable = true;
