@@ -6,8 +6,6 @@ self:
 home.username = "jules";
 home.homeDirectory = "/home/jules";
 
-programs.home-manager.enable = true;
-
 xdg.enable = true;
 
 home.file."scripts".source = "${self}/scripts"; # pass 'self' in order to allow ./users/default.nix -> ./users/**/default.nix to access ${self}, to provide a path relative to flake.nix.
@@ -32,5 +30,5 @@ home = {
 # You can update Home Manager without changing this value. See
 # the Home Manager release notes for a list of state version
 # changes in each release.
-home.stateVersion = "20.03";
+home.stateVersion = "23.11";
 }
