@@ -122,5 +122,5 @@ networking.useDHCP = true;
     services.xserver.layout = "fr"; 
 
 
-   
+   system.stateVersion = "23.11";
 }
