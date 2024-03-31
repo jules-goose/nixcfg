@@ -23,10 +23,10 @@
         ];
         specialArgs = { inherit inputs; };
       };
-      shinonome = nixpkgs.lib.nixosSystem {
+      treaka = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          (import ./hosts/shinonome/configuration.nix)
+          (import ./hosts/treaka/configuration.nix)
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
