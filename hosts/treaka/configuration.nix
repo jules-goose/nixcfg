@@ -8,8 +8,6 @@
     imports =
     [ # Include the results of the hardware scan.
         ./hardware-configuration.nix
-#      ./modules
-#      ./cachix.nix
     ];
 
 nix = {
@@ -57,7 +55,7 @@ networking.hostName = "treaka"; # Define your hostname.
       headless = false;
     };
   };
-  
+
 # The global useDHCP flag is deprecated, therefore explicitly set to false here.
 # Per-interface useDHCP will be mandatory in the future, so this generated config
 # replicates the default behaviour.
@@ -123,9 +121,9 @@ networking.useDHCP = true;
     
 
     # display manager
-    services.xserver.displayManager.gdm.enable = true;
-    services.xserver.displayManager.autoLogin.enable = true;
-    services.xserver.displayManager.autoLogin.user = "jules";
+    #services.xserver.displayManager.gdm.enable = true;
+    #services.xserver.displayManager.autoLogin.enable = true;
+    #services.xserver.displayManager.autoLogin.user = "jules";
     # keyboard layout
     services.xserver.layout = "fr"; 
 
