@@ -3,11 +3,6 @@ self:
 { config, lib, pkgs, ... }:
 
 {
-imports =
-    [
-      ./modules
-    ];
-
 home.username = "jules";
 home.homeDirectory = "/home/jules";
 

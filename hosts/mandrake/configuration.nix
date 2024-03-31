@@ -47,8 +47,15 @@ hardware.opengl.driSupport32Bit = true;
 
 networking.hostName = "mandrake"; # Define your hostname.
 
-nixpkgs.overlays = [ inputs.nur.overlay ];
-
+  home-manager = {
+    useGlobalPkgs = true;
+    useUserPackages = true;
+    users = import "${inputs.self}/users";
+    extraSpecialArgs = {
+      inherit inputs;
+      headless = false;
+    };
+  };
 
 # The global useDHCP flag is deprecated, therefore explicitly set to false here.
 # Per-interface useDHCP will be mandatory in the future, so this generated config
